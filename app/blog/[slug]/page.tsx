@@ -136,19 +136,19 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           <article className="max-w-3xl mx-auto">
             <div className="prose prose-lg max-w-none
               prose-headings:font-bold prose-headings:text-gray-900 prose-headings:tracking-tight
-              prose-h1:text-3xl prose-h1:mb-6 prose-h1:mt-12 prose-h1:leading-tight
-              prose-h2:text-2xl prose-h2:mb-5 prose-h2:mt-10 prose-h2:leading-snug
-              prose-h3:text-xl prose-h3:mb-4 prose-h3:mt-8
-              prose-h4:text-lg prose-h4:mb-3 prose-h4:mt-6
-              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-5 prose-p:text-base
+              prose-h1:text-2xl prose-h1:mb-6 prose-h1:mt-12 prose-h1:leading-tight
+              prose-h2:text-xl prose-h2:mb-5 prose-h2:mt-10 prose-h2:leading-snug
+              prose-h3:text-lg prose-h3:mb-4 prose-h3:mt-8
+              prose-h4:text-base prose-h4:mb-3 prose-h4:mt-6 prose-h4:font-semibold
+              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-8 prose-p:text-base
               prose-a:text-purple-600 prose-a:no-underline hover:prose-a:underline prose-a:font-medium
               prose-strong:text-gray-900 prose-strong:font-semibold
-              prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6 prose-ul:space-y-2
-              prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6 prose-ol:space-y-2
+              prose-ul:my-8 prose-ul:list-disc prose-ul:pl-6 prose-ul:space-y-2
+              prose-ol:my-8 prose-ol:list-decimal prose-ol:pl-6 prose-ol:space-y-2
               prose-li:text-gray-700 prose-li:leading-relaxed prose-li:text-base
-              prose-blockquote:border-l-4 prose-blockquote:border-purple-600 prose-blockquote:pl-6 prose-blockquote:py-2 prose-blockquote:my-6 prose-blockquote:italic prose-blockquote:text-gray-700 prose-blockquote:bg-purple-50/30
+              prose-blockquote:border-l-4 prose-blockquote:border-purple-600 prose-blockquote:pl-6 prose-blockquote:py-2 prose-blockquote:my-8 prose-blockquote:italic prose-blockquote:text-gray-700 prose-blockquote:bg-purple-50/30
               prose-code:text-purple-600 prose-code:bg-purple-50 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono
-              prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-6 prose-pre:rounded-lg prose-pre:overflow-x-auto prose-pre:my-6
+              prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-6 prose-pre:rounded-lg prose-pre:overflow-x-auto prose-pre:my-8
               prose-hr:my-10 prose-hr:border-gray-200
             ">
               <ReactMarkdown>{post.content}</ReactMarkdown>
