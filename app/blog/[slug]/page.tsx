@@ -151,11 +151,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-6 prose-pre:rounded-lg prose-pre:overflow-x-auto prose-pre:my-8
               prose-hr:my-12 prose-hr:border-gray-200
             ">
-              {dbPost ? (
-                <div dangerouslySetInnerHTML={{ __html: post.content }} />
-              ) : (
-                <ReactMarkdown>{post.content}</ReactMarkdown>
-              )}
+              <ReactMarkdown>{post.content}</ReactMarkdown>
             </div>
           </article>
         </div>
