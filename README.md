@@ -1,10 +1,6 @@
 # COMMA Studio Website
 
-**🌐 LIVE:** http://31.97.115.105:8080
-
 A modern, high-performance website for COMMA Studio - a performance copywriting agency specializing in ads, emails, and websites that drive results.
-
-**✅ DEPLOYED TO PRODUCTION** - Hostinger VPS with PostgreSQL, NextAuth, and PM2
 
 ## Overview
 
@@ -146,14 +142,6 @@ See TODO comments in `/app/api/newsletter/route.ts`
 
 **NEW!** The website now includes a full-featured admin portal for managing content without editing code.
 
-### Production Access
-
-**🌐 Live Admin Portal:** http://31.97.115.105:8080/admin/login
-
-**Credentials:**
-- Email: `james@commastudio.com`
-- Password: `NewPassword123!`
-
 ### Local Development
 
 1. **Access local admin portal**: http://localhost:3000/admin/login
@@ -205,32 +193,16 @@ Your markdown content here...
 
 ## Deployment
 
-### ✅ Currently Deployed (Production)
+### Deployment Options
 
-**🌐 Live:** http://31.97.115.105:8080
-
-**Environment:**
-- **Server:** Hostinger VPS (Ubuntu 24.04)
-- **Database:** Supabase PostgreSQL
-- **Process Manager:** PM2
-- **Web Server:** Nginx (reverse proxy on port 8080)
-- **SSL:** Let's Encrypt
-
-**Complete deployment documentation:**
-- **Quick Reference:** [PRODUCTION-QUICK-REFERENCE.md](PRODUCTION-QUICK-REFERENCE.md)
-- **Full Guide:** [docs/VPS-DEPLOYMENT-COMPLETE.md](docs/VPS-DEPLOYMENT-COMPLETE.md)
-- **Supabase Setup:** [docs/SUPABASE-SETUP.md](docs/SUPABASE-SETUP.md)
-
-### Other Deployment Options
-
-#### Option 1: Vercel (Alternative)
+#### Vercel Deployment
 1. Push your code to GitHub
 2. Connect your repository to Vercel
 3. Add environment variables
 4. Deploy!
 
-#### Option 2: Other VPS Providers
-See [docs/VPS-DEPLOYMENT-COMPLETE.md](docs/VPS-DEPLOYMENT-COMPLETE.md) for instructions that work with any VPS provider (DigitalOcean, Linode, etc.)
+#### VPS Deployment
+See [docs/VPS-DEPLOYMENT-COMPLETE.md](docs/VPS-DEPLOYMENT-COMPLETE.md) for instructions that work with any VPS provider (Hostinger, DigitalOcean, Linode, etc.)
 
 ## Environment Variables
 
