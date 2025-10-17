@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed:admin": "npx ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} scripts/create-admin.ts"
+    "seed:admin": "npx ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} scripts/create-admin.ts",
+    "import:blog": "npx ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} scripts/import-blog-posts.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.67.0",
