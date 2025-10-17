@@ -45,4 +45,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# logs
+*.log
+mcp-shell.log
+
+# temporary files
+nul
+
 /lib/generated/prisma
