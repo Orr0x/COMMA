@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx prisma:*)",
+      "Bash(npx ts-node:*)",
+      "Bash(taskkill:*)",
+      "Bash(timeout 10 npm run dev:*)",
+      "Bash(exit 0)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run seed:admin:*)",
+      "Bash(node create-admin-quick.js:*)",
+      "Bash(findstr:*)",
+      "Bash(cat:*)",
+      "Bash(node:*)",
+      "Bash(Test-NetConnection -ComputerName db.zxx1mlkcpucnxkwrdclf.supabase.co -Port 5432)",
+      "Bash(powershell -Command \"Test-NetConnection -ComputerName db.zxx1mlkcpucnxkwrdclf.supabase.co -Port 5432\")",
+      "Bash(nslookup:*)",
+      "Bash(ping:*)",
+      "Bash(git check-ignore:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
