@@ -20,7 +20,9 @@ This document provides a complete handover for the COMMA Studio project. The pro
 - ✅ Claude AI integration (Sonnet 4.5)
 - ✅ NextAuth v5 authentication
 - ✅ Production deployment on Hostinger VPS
-- ✅ SSL/HTTPS configuration
+- ✅ Blog post import system (markdown to database)
+- ✅ Blog posts with markdown rendering
+- ✅ Three sample blog posts imported
 - ✅ PM2 process management
 - ✅ Nginx reverse proxy
 - ✅ Comprehensive navigation system
@@ -39,6 +41,135 @@ This document provides a complete handover for the COMMA Studio project. The pro
 - Email integration (Resend or similar)
 - Additional content pages (About, Services detail pages)
 - API key rotation (keys exposed in documentation)
+
+---
+
+## Blog System
+
+### Overview
+The blog system supports both database posts and markdown files, allowing flexible content management:
+
+**Database Posts (Recommended):**
+- Managed through admin portal at `/admin/dashboard/blog`
+- Full CRUD operations (Create, Read, Update, Delete)
+- Rich text editing with React Quill
+- Published status toggle
+- Automatically displayed on `/blog` page
+
+**Markdown Files (Legacy):**
+- Located in `content/blog/` directory
+- Frontmatter with metadata (title, date, excerpt, etc.)
+- Can be imported to database using import script
+- Useful for bulk content migration
+
+### Blog Post Import
+
+**Import Script:** `scripts/import-blog-posts.ts`
+
+**Usage:**
+```bash
+# Import markdown files from content/blog/ to database
+npm run import:blog
+```
+
+**Features:**
+- Parses frontmatter (title, date, excerpt, category, author, etc.)
+- Converts markdown content for database storage
+- Skips duplicate posts (checks by slug)
+- Safe to run multiple times
+- Detailed output with success/skip/error counts
+
+**Markdown File Format:**
+```markdown
+---
+title: "Your Post Title"
+date: "2024-10-08"
+excerpt: "A short description"
+category: "Email Marketing"
+readTime: "6 min read"
+author: "Cain Lewis"
+published: true
+---
+
+# Your Post Title
+
+Your markdown content here...
+```
+
+### Blog Display
+
+**Public Blog Page:** `/blog`
+- Lists all published posts (database + markdown)
+- Category filtering
+- Search functionality
+- Responsive grid layout
+
+**Individual Post:** `/blog/[slug]`
+- Renders markdown with ReactMarkdown
+- Full typography styling with Tailwind prose
+- Optimized heading sizes (max 2xl)
+- Good paragraph spacing for readability
+- Related posts section
+- CTA to contact
+
+**Typography Settings:**
+- H1: 2xl
+- H2: xl
+- H3: lg
+- H4: base (bold)
+- Body: base
+- Paragraph spacing: 2rem (mb-8)
+
+### Current Blog Posts
+
+Three sample posts are included and imported:
+1. **"7 Email Subject Line Formulas That Actually Get Opened"**
+   - Category: Email Marketing
+   - 6 min read
+   - Published: Oct 8, 2024
+
+2. **"How to Write High-Converting Facebook Ads"**
+   - Category: Performance Advertising
+   - 7 min read
+   - Published: Oct 15, 2024
+
+3. **"The Complete Product Launch Copywriting Checklist"**
+   - Category: Product Marketing
+   - 9 min read
+   - Published: Sep 22, 2024
+
+### Adding New Blog Posts
+
+**Method 1: Admin Portal (Recommended)**
+1. Go to `/admin/dashboard/blog`
+2. Click "Create New Post"
+3. Write content using WYSIWYG editor
+4. Add metadata (category, excerpt, read time)
+5. Toggle published status
+6. Save
+
+**Method 2: Markdown Files**
+1. Create `.md` file in `content/blog/`
+2. Add frontmatter with metadata
+3. Write content in markdown
+4. Run `npm run import:blog`
+5. Post appears on site
+
+**Method 3: AI Blog Assistant**
+1. Go to `/admin/dashboard/ai-tools/blog`
+2. Enter topic and parameters
+3. Generate with Claude AI
+4. Copy generated content
+5. Create post in admin portal
+
+### Blog Documentation
+
+See [docs/BLOG-IMPORT-GUIDE.md](BLOG-IMPORT-GUIDE.md) for:
+- Detailed import instructions
+- Local vs VPS deployment
+- Troubleshooting guide
+- File format examples
+- Management tips
 
 ---
 
